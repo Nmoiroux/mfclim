@@ -31,7 +31,9 @@ To use the API, you need credentials from the Météo-France API portal:
 - Go to: My API → Climatological data → Generate Token
 
 At the bottom, their is code chunk as below:
+
 `curl -k -X POST https://portail-api.meteofrance.fr/token -d "grant_type=client_credentials" -H "Authorization: Basic 1nSHsOA5tKHea6IFAKE1ga8pOMcpLSTAooJfnOpgtErsJxwftUmlLFAKE6cM86efz5pAf00Pj1pv"`
+
 Copy the string that appears after "Authorization: Basic" and paste it in R as follow:
 
 ``` r
