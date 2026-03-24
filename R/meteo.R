@@ -92,15 +92,15 @@ mfclim_get_token <- function(client_auth) {
 
   url <- "https://portail-api.meteofrance.fr/token"
 
-  res <- httr::POST(
+  res <- POST(
     url,
-    httr::add_headers(
+    add_headers(
       Authorization = paste("Basic", client_auth)
     ),
     body = list(grant_type = "client_credentials")
   )
 
-  token <- httr::content(res)$access_token
+  token <- content(res)$access_token
 
   if (!is.null(token)){
     return(token)
@@ -109,7 +109,7 @@ mfclim_get_token <- function(client_auth) {
       paste0(
         "Failed to obtain access token. Please check your credentials ",
         "(client_auth argument).\nServer response:\n",
-        httr::content(res)
+        content(res)
       )
     )
   }
@@ -166,9 +166,9 @@ mfclim_order <- function(token, station, step = c("1mo", "10d","1d","1h","6m"), 
 
   url <- paste0("https://public-api.meteofrance.fr/public/DPClim/v1/commande-station/",data)
 
-  res <- httr::GET(
+  res <- GET(
     url,
-    httr::add_headers(
+    add_headers(
       Authorization = paste("Bearer", token)
     ),
     query = list(
@@ -183,7 +183,7 @@ mfclim_order <- function(token, station, step = c("1mo", "10d","1d","1h","6m"), 
 
   if (status == 202) {
     message("Data order accepted")
-    cmd <- httr::content(res)
+    cmd <- content(res)
     return(cmd$elaboreProduitAvecDemandeResponse$return)
   }
 }
@@ -220,26 +220,26 @@ mfclim_download <- function(token, id_cmde, filename = "data.csv") {
 
   repeat {
 
-    res <- httr::GET(
+    res <- GET(
       url,
-      httr::add_headers(
+      add_headers(
         Authorization = paste("Bearer", token)
       ),
       query = list(`id-cmde` = id_cmde),
-      httr::write_disk(filename, overwrite = TRUE)
+      write_disk(filename, overwrite = TRUE)
     )
 
-    if (httr::status_code(res) == 201) {
+    if (status_code(res) == 201) {
       message("File downloaded successfully.")
       break
     }
 
-    if (httr::status_code(res) == 204) {
+    if (status_code(res) == 204) {
       message("File not ready yet. Retrying in 5 seconds...")
       Sys.sleep(5)
     }
 
-    if (httr::status_code(res) >= 400) {
+    if (status_code(res) >= 400) {
       mfclim_check_status(res)
     }
   }
@@ -353,6 +353,8 @@ mfclim_get_data <- function(
 #' @details If \code{token} is not provided, the function will automatically
 #'   request a new token using \code{client_auth}.
 #'
+#' @importFrom httr GET add_headers
+#'
 #' @export
 #'
 #' @examples
@@ -400,9 +402,9 @@ mfclim_list_stations <- function(token,
     query_list$parametre <- parametre
   }
 
-  res <- httr::GET(
+  res <- GET(
     url,
-    httr::add_headers(
+    add_headers(
       Authorization = paste("Bearer", token)
     ),
     query = query_list
@@ -411,7 +413,7 @@ mfclim_list_stations <- function(token,
   status <- mfclim_check_status(res)
 
   if (status == 200) {
-    stations <- httr::content(res, as = "parsed")
+    stations <- content(res, as = "parsed")
     stations <- do.call(rbind, lapply(stations, as.data.frame))
     return(stations)
   }
@@ -459,9 +461,9 @@ mfclim_info_station <- function(token,
 
   url <- "https://public-api.meteofrance.fr/public/DPClim/v1/information-station"
 
-  res <- httr::GET(
+  res <- GET(
     url,
-    httr::add_headers(
+    add_headers(
       Authorization = paste("Bearer", token)
     ),
     query = list(`id-station` = station)
@@ -470,7 +472,7 @@ mfclim_info_station <- function(token,
   status <- mfclim_check_status(res)
 
   if (status == 200) {
-    info <- httr::content(res, as = "parsed")[[1]]
+    info <- content(res, as = "parsed")[[1]]
     info_parsed <- mfclim_parse_json(info)
     return(info_parsed)
   }
@@ -483,7 +485,7 @@ mfclim_info_station <- function(token,
 #' Météo-France API request. If the status code indicates an error,
 #' a descriptive message is returned and the function stops execution.
 #'
-#' @param res Response object returned by \code{httr::GET()} or \code{httr::POST()}.
+#' @param res Response object returned by \code{httr2::GET()} or \code{httr2::POST()}.
 #'
 #' @return Integer. HTTP status code of the response.
 #'
@@ -491,17 +493,10 @@ mfclim_info_station <- function(token,
 #'   and prints a descriptive message including the status code and the
 #'   content of the API response.
 #'
-#' @export
 #'
-#' @examples
-#' \dontrun{
-#' res <- httr::GET("https://public-api.meteofrance.fr/public/DPClim/v1/liste-stations/quotidienne",
-#'                  httr::add_headers(Authorization = paste("Bearer", token)))
-#' mfclim_check_status(res)
-#' }
 mfclim_check_status <- function(res) {
 
-  status <- httr::status_code(res)
+  status <- status_code(res)
 
   messages <- c(
     "400" = "Incorrect parameters",
@@ -517,7 +512,7 @@ mfclim_check_status <- function(res) {
 
   if (status >= 400) {
     msg <- messages[as.character(status)]
-    msgAPI <- httr::content(res)
+    msgAPI <- content(res)
     if (is.na(msg)) msg <- "Unknow API error code"
     stop(paste0("Error ", status, ": ", msg,",\n
                 message returned by the server: ", msgAPI))
@@ -533,7 +528,7 @@ mfclim_check_status <- function(res) {
 #' into a more convenient R structure. Simple values are stored as vectors,
 #' while nested lists are converted into data.frames.
 #'
-#' @param x A named list, typically obtained from \code{httr::content(..., as="parsed")}.
+#' @param x A named list, typically obtained from \code{httr2::content(..., as="parsed")}.
 #'
 #' @return A named list where:
 #'   - simple values are stored as vectors,

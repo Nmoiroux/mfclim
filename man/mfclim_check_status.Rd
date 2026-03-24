@@ -7,7 +7,7 @@
 mfclim_check_status(res)
 }
 \arguments{
-\item{res}{Response object returned by \code{httr::GET()} or \code{httr::POST()}.}
+\item{res}{Response object returned by \code{httr2::GET()} or \code{httr2::POST()}.}
 }
 \value{
 Integer. HTTP status code of the response.
@@ -21,11 +21,4 @@ a descriptive message is returned and the function stops execution.
 If the API returns an error (status >= 400), the function stops
 and prints a descriptive message including the status code and the
 content of the API response.
-}
-\examples{
-\dontrun{
-res <- httr::GET("https://public-api.meteofrance.fr/public/DPClim/v1/liste-stations/quotidienne",
-                 httr::add_headers(Authorization = paste("Bearer", token)))
-mfclim_check_status(res)
-}
 }

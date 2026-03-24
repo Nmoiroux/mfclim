@@ -7,7 +7,7 @@
 mfclim_parse_json(x)
 }
 \arguments{
-\item{x}{A named list, typically obtained from \code{httr::content(..., as="parsed")}.}
+\item{x}{A named list, typically obtained from \code{httr2::content(..., as="parsed")}.}
 }
 \value{
 A named list where:
