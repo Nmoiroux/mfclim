@@ -5,7 +5,7 @@
 <!-- badges: end -->
 
 mfclim is an R package to download archived meteorological data from Météo-France using the 'Données Climatologiques' [API](https://portail-api.meteofrance.fr/web/en/api/DonneesPubliquesClimatologie). It provides functions to authenticate, list stations, retrieve station metadata, request climate data, download files, and import data directly into R. 
-mfclim has also a function to download SYNOP WMO open data archives [from meteo.data.gouv.fr](https://meteo.data.gouv.fr/datasets/686f8595b351c06a3a790867)  
+mfclim has also a function to download SYNOP WMO open data archives from [meteo.data.gouv.fr](https://meteo.data.gouv.fr/datasets/686f8595b351c06a3a790867).  
 
 The package is primarimy designed as a lightweight wrapper around the Météo-France API.
 
@@ -27,8 +27,8 @@ To use the API, you need credentials from the Météo-France API portal:
 - Navigate to the '[Climatological data API page](https://portail-api.meteofrance.fr/web/en/api/DonneesPubliquesClimatologie)' and click 'Subscribe to the API for free'.
 
 2. Get your personal identifier
-- Click account button (top right) 
-- Go to My API → Climatological data → Generate Token
+- Click account button ("Hello first-name family-name", top right) 
+- Go to: My API → Climatological data → Generate Token
 
 At the bottom, their is code chunk as below:
 ```console
@@ -115,5 +115,5 @@ synop2020 <- mfclim_synop(2020)
 head(synop2020)
 ```
 
-### License 
+## License 
 This package is released under the [GPL-3 License](https://www.gnu.org/licenses/gpl-3.0-standalone.html). 
