@@ -2,7 +2,7 @@
 % Please edit documentation in R/meteo.R
 \name{mfclim_get_data}
 \alias{mfclim_get_data}
-\title{Download archived meteorological data from the Météo-France "Données Climatologiques" API in one step}
+\title{Download archived meteorological data from the Meteo-France "Donnees Climatologiques" API in one step}
 \usage{
 mfclim_get_data(
   token,
@@ -19,7 +19,7 @@ mfclim_get_data(
 \code{mfclim_get_token()} (optional if \code{client_auth} is provided).}
 
 \item{client_auth}{Character string. Authentication string provided by the
-Météo-France API portal (optional if \code{token} is provided).}
+Meteo-France API portal (optional if \code{token} is provided).}
 
 \item{station}{Character string. Station identifier.}
 

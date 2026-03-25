@@ -2,7 +2,7 @@
 % Please edit documentation in R/meteo.R
 \name{mfclim_info_station}
 \alias{mfclim_info_station}
-\title{Get information about a Météo-France station}
+\title{Get information about a Meteo-France station}
 \usage{
 mfclim_info_station(token, client_auth, station)
 }
@@ -11,7 +11,7 @@ mfclim_info_station(token, client_auth, station)
 \code{mfclim_get_token()}.}
 
 \item{client_auth}{Character string. Authentication string provided by the
-Météo-France API portal. Used to automatically obtain a token if
+Meteo-France API portal. Used to automatically obtain a token if
 \code{token} is not provided.}
 
 \item{station}{Character string. Station identifier (8-digit station code).}
@@ -21,7 +21,7 @@ A list containing station metadata. Scalar elements are returned
 as vectors, and nested list elements are converted into data frames.
 }
 \description{
-Retrieve metadata and information for a given Météo-France station
+Retrieve metadata and information for a given Meteo-France station
 using its station identifier.
 }
 \details{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/meteo.R
 \name{mfclim_check_status}
 \alias{mfclim_check_status}
-\title{Check HTTP response status from Météo-France API}
+\title{Check HTTP response status from Meteo-France API}
 \usage{
 mfclim_check_status(res)
 }
@@ -14,7 +14,7 @@ Integer. HTTP status code of the response.
 }
 \description{
 Verifies the HTTP status code of a response object returned by a
-Météo-France API request. If the status code indicates an error,
+Meteo-France API request. If the status code indicates an error,
 a descriptive message is returned and the function stops execution.
 }
 \details{

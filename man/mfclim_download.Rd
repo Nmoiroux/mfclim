@@ -2,7 +2,7 @@
 % Please edit documentation in R/meteo.R
 \name{mfclim_download}
 \alias{mfclim_download}
-\title{Download a climate data file from the Météo-France API}
+\title{Download a climate data file from the Meteo-France API}
 \usage{
 mfclim_download(token, id_cmde, filename = "data.csv")
 }

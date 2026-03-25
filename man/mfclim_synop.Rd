@@ -2,7 +2,7 @@
 % Please edit documentation in R/meteo.R
 \name{mfclim_synop}
 \alias{mfclim_synop}
-\title{Download SYNOP data from Météo-France open data}
+\title{Download SYNOP data from Meteo-France open data}
 \usage{
 mfclim_synop(year, envload = FALSE)
 }
@@ -16,7 +16,7 @@ mfclim_synop(year, envload = FALSE)
 A data.frame containing the downloaded data.
 }
 \description{
-Downloads SYNOP surface observation data from the Météo-France open data
+Downloads SYNOP surface observation data from the Meteo-France open data
 portal for a given year, decompresses the archive, and loads the data
 into R.
 }

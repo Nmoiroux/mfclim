@@ -2,7 +2,7 @@
 % Please edit documentation in R/meteo.R
 \name{mfclim_order}
 \alias{mfclim_order}
-\title{Order climate data for a station from the Météo-France API}
+\title{Order climate data for a station from the Meteo-France API}
 \usage{
 mfclim_order(
   token,
@@ -34,7 +34,7 @@ This ID must be used to download the data file.
 }
 \description{
 Submit an asynchronous order for climatological data from a
-Météo-France station. The function returns a order ID that must be used
+Meteo-France station. The function returns a order ID that must be used
 later to download the data file.
 }
 \details{

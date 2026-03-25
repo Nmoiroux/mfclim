@@ -2,7 +2,7 @@
 % Please edit documentation in R/meteo.R
 \name{mfclim_parse_json}
 \alias{mfclim_parse_json}
-\title{Parse a JSON-like list from Météo-France API into R structures}
+\title{Parse a JSON-like list from Meteo-France API into R structures}
 \usage{
 mfclim_parse_json(x)
 }
@@ -17,7 +17,7 @@ A named list where:
 }
 }
 \description{
-Converts a parsed JSON object (list) returned by the Météo-France API
+Converts a parsed JSON object (list) returned by the Meteo-France API
 into a more convenient R structure. Simple values are stored as vectors,
 while nested lists are converted into data.frames.
 }

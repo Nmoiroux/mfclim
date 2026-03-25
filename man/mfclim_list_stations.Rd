@@ -2,7 +2,7 @@
 % Please edit documentation in R/meteo.R
 \name{mfclim_list_stations}
 \alias{mfclim_list_stations}
-\title{Get the list of Météo-France stations by department}
+\title{Get the list of Meteo-France stations by department}
 \usage{
 mfclim_list_stations(
   token,
@@ -17,7 +17,7 @@ mfclim_list_stations(
 \code{mfclim_get_token()}.}
 
 \item{client_auth}{Character string. Authentication string provided by the
-Météo-France API portal. Used to automatically obtain a token if
+Meteo-France API portal. Used to automatically obtain a token if
 \code{token} is not provided.}
 
 \item{departement}{Character or numeric. French department code.}
@@ -35,7 +35,7 @@ to filter stations. One of:
 A data.frame containing the list of stations and their metadata.
 }
 \description{
-Retrieve the list of available Météo-France stations for a given French
+Retrieve the list of available Meteo-France stations for a given French
 department and data frequency. The list can optionally be filtered by
 meteorological parameter.
 }

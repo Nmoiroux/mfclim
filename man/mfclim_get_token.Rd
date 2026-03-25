@@ -2,26 +2,26 @@
 % Please edit documentation in R/meteo.R
 \name{mfclim_get_token}
 \alias{mfclim_get_token}
-\title{Get Météo-France API access token}
+\title{Get Meteo-France API access token}
 \usage{
 mfclim_get_token(client_auth)
 }
 \arguments{
 \item{client_auth}{Character string. Authentication identifier provided by the
-Météo-France API portal (string following "Authorization: Basic").}
+Meteo-France API portal (string following "Authorization: Basic").}
 }
 \value{
 A character string containing the access token used to authenticate
 subsequent API requests.
 }
 \description{
-Request an OAuth2 access token from the Météo-France API using the
+Request an OAuth2 access token from the Meteo-France API using the
 client credentials authentication flow.
 }
 \details{
-Requires a valid account on the Météo-France API portal \url{https://portail-api.meteofrance.fr} and
+Requires a valid account on the Meteo-France API portal \url{https://portail-api.meteofrance.fr} and
 a (free) subscription to the 'Climatological data' API (\url{https://portail-api.meteofrance.fr/web/en/api/DonneesPubliquesClimatologie}).
-The \code{client_auth} value must be obtained from your account on the Météo-France API portal:
+The \code{client_auth} value must be obtained from your account on the Meteo-France API portal:
 \itemize{
 \item Go to 'My API' -> 'Climatological data' -> 'Generate Token' -> 'Curl'
 \item Copy the string that appears after "Authorization: Basic" in the provided curl command (remove the trailing \verb{"}).
