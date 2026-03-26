@@ -2,18 +2,18 @@ Package: mfclim
 Title: Download Météo-France data using API and SYNOP open data.
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Nicolas", 
-           family = "Moiroux", 
-           email = "nicolas.moiroux@ird.fr", 
-           role = c("aut", "cre"),
+    person("Nicolas", "Moiroux", , "nicolas.moiroux@ird.fr", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-6755-6167"))
-Description: Download climatological data from the Météo-France public API 'Données climatologiques' and SYNOP open data archives. It provides functions to authenticate, list stations, retrieve station metadata, request climate data, download files, and import data directly into R.
+Description: Download climatological data from the Météo-France public API
+    'Données climatologiques' and SYNOP open data archives. It provides
+    functions to authenticate, list stations, retrieve station metadata,
+    request climate data, download files, and import data directly into R.
 License: AGPL (>= 3)
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 URL: https://github.com/Nmoiroux/mfclim
 BugReports: https://github.com/Nmoiroux/mfclim/issues
 Imports: 
     httr,
     utils
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
