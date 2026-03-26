@@ -219,6 +219,7 @@ mfclim_download <- function(token, id_cmde, filename = "data.csv", folder = temp
 
   url <- "https://public-api.meteofrance.fr/public/DPClim/v1/commande/fichier"
   filepath <- paste0(folder,"/",filename)
+  filepath <- gsub(pattern="//", replacement="/", x=filepath)
 
   repeat {
 
@@ -329,7 +330,7 @@ mfclim_get_data <- function(
 
   file <- mfclim_download(token, id_cmde, filename = filename, folder = folder)
 
-  data <- read.csv(file, sep = ";")
+  data <- read.csv2(file)
 
   return(data)
 }
