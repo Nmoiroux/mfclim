@@ -128,4 +128,4 @@ head(synop2020)
 ```
 
 ## License 
-This package is released under the [GPL-3 License](https://www.gnu.org/licenses/gpl-3.0-standalone.html). 
+This package is released under the [GPL-3 License](https://www.gnu.org/licenses/gpl-3.0.html). 

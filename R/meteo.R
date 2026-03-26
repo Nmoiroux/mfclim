@@ -33,8 +33,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' mfclim_synop(2020, TRUE)
-#' mydata <- mfclim_synop(2020, FALSE)
+#' mydata <- mfclim_synop(2020)
 #' }
 mfclim_synop <- function(year, path=tempdir()){
 
@@ -490,7 +489,7 @@ mfclim_info_station <- function(token,
 #' Meteo-France API request. If the status code indicates an error,
 #' a descriptive message is returned and the function stops execution.
 #'
-#' @param res Response object returned by \code{httr2::GET()} or \code{httr2::POST()}.
+#' @param res Response object returned by \code{httr::GET()} or \code{httr::POST()}.
 #'
 #' @return Integer. HTTP status code of the response.
 #'

@@ -1,13 +1,13 @@
 Package: mfclim
-Title: Download archived meteorological data from Meteo-France
+Title: Download Archived Meteorological Data from Meteo-France
 Version: 0.1.0
 Authors@R: 
     person("Nicolas", "Moiroux", , "nicolas.moiroux@ird.fr", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-6755-6167"))
-Description: Download meteorological data from the Meteo-France public API
-    'Données climatologiques' and SYNOP open data archives. It provides
+Description: Download meteorological data from the 'Meteo-France' public API
+    'Données climatologiques' and 'SYNOP' open data archives. It provides
     functions to authenticate, list stations, retrieve station metadata,
-    request data, download files, and import data directly into R.
+    request data, download files, and import data directly into 'R'.
 License: AGPL (>= 3)
 URL: https://github.com/Nmoiroux/mfclim
 BugReports: https://github.com/Nmoiroux/mfclim/issues
