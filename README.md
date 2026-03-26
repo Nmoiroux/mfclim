@@ -30,7 +30,7 @@ To use the API, you need credentials from the Météo-France API portal:
 - Click account button ("Hello first-name family-name", top right) 
 - Go to: My API → Climatological data → Generate Token
 
-At the bottom, their is code block as below:
+At the bottom, there is a code block as below:
 
 `curl -k -X POST https://portail-api.meteofrance.fr/token -d "grant_type=client_credentials" -H "Authorization: Basic 1nSHsOA5tKHea6IFAKE1ga8pOMcpLSTAooJfnOpgtErsJxwftUmlLFAKE6cM86efz5pAf00Pj1pv"`
 
