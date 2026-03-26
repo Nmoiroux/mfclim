@@ -497,7 +497,7 @@ mfclim_info_station <- function(token,
 #' @details If the API returns an error (status >= 400), the function stops
 #'   and prints a descriptive message including the status code and the
 #'   content of the API response.
-#'
+#' @noRd
 #'
 mfclim_check_status <- function(res) {
 
@@ -541,7 +541,7 @@ mfclim_check_status <- function(res) {
 #'
 #' @details Used for transforming the structure returned by
 #'   \code{mfclim_info_station} into a more user-friendly format.
-#'
+#' @noRd
 #'
 mfclim_parse_json <- function(x) {
 

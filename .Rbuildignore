@@ -4,3 +4,4 @@
 ^dev$
 ^CITATION\.cff$
 ^\.github$
+^revdep$
