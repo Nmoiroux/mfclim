@@ -105,7 +105,9 @@ head(data)
 ```
 ### Notes 
 The Météo-France API uses asynchronous requests: data must first be ordered, then downloaded. Large requests may take several minutes before the file is available.
+
 Dates must be provided in ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ.
+
 Documentation (metadata) for the downloaded data are available on the Météo-France [Wiki](https://confluence-meteofrance.atlassian.net/wiki/x/AYALJQ).
 
 
