@@ -4,7 +4,7 @@
 \alias{mfclim_download}
 \title{Download a climate data file from the Meteo-France API}
 \usage{
-mfclim_download(token, id_cmde, filename = "data.csv")
+mfclim_download(token, id_cmde, filename = "data.csv", folder = tempdir())
 }
 \arguments{
 \item{token}{Character string. OAuth2 access token obtained with
@@ -14,6 +14,8 @@ mfclim_download(token, id_cmde, filename = "data.csv")
 \code{mfclim_order()}.}
 
 \item{filename}{Character string. Name of the output CSV file.}
+
+\item{folder}{Character string. Where to save the downloaded CSV file. Default to \code{tempdir()}}
 }
 \value{
 Character string. Path to the downloaded file.

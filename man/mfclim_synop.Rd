@@ -4,21 +4,19 @@
 \alias{mfclim_synop}
 \title{Download SYNOP data from Meteo-France open data}
 \usage{
-mfclim_synop(year, envload = FALSE)
+mfclim_synop(year, path = tempdir())
 }
 \arguments{
 \item{year}{Numeric or character. Year of the data to download (YYYY), between 1996 and present year (included).}
 
-\item{envload}{Boolean TRUE/FALSE. If TRUE, the function creates a data.frame in the global environment named
-\code{synop.YYYY}. Default to FALSE}
+\item{path}{Path to folder where to save the archive. Default to \code{tempdir()}.}
 }
 \value{
 A data.frame containing the downloaded data.
 }
 \description{
 Downloads SYNOP surface observation data from the Meteo-France open data
-portal for a given year, decompresses the archive, and loads the data
-into R.
+portal for a given year, decompresses the archive, and return a data frame.
 }
 \details{
 SYNOP data come from observation messages exchanged

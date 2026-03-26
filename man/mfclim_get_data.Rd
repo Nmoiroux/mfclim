@@ -11,7 +11,8 @@ mfclim_get_data(
   step,
   date_deb,
   date_fin,
-  filename = "data.csv"
+  filename = "data.csv",
+  folder = tempdir()
 )
 }
 \arguments{
@@ -29,7 +30,9 @@ Meteo-France API portal (optional if \code{token} is provided).}
 
 \item{date_fin}{Character string. End date in ISO 8601 \emph{UTC} format. If \code{step = "6m"}, minutes values must be multiples of 6 (00, 06, 12, 18, 24, 30, 36, 42, 48, 54).}
 
-\item{filename}{Character string. Name of the downloaded CSV file.}
+\item{filename}{Character string. Name of the downloaded CSV file. Default to}
+
+\item{folder}{Character string. Where to save the downloaded CSV file. Default to \code{tempdir()}.}
 }
 \value{
 A data.frame containing the climate data.

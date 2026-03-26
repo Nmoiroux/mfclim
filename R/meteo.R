@@ -1,8 +1,7 @@
 #' Download SYNOP data from Meteo-France open data
 #'
 #' Downloads SYNOP surface observation data from the Meteo-France open data
-#' portal for a given year, decompresses the archive, and loads the data
-#' into R.
+#' portal for a given year, decompresses the archive, and return a data frame.
 #'
 #' SYNOP data come from observation messages exchanged
 #' through the World Meteorological Organization (WMO) Global Telecommunication
@@ -17,8 +16,7 @@
 #' observation frequency of 3 hours. Available years cover 1996 to present.
 #'
 #' @param year Numeric or character. Year of the data to download (YYYY), between 1996 and present year (included).
-#' @param envload Boolean TRUE/FALSE. If TRUE, the function creates a data.frame in the global environment named
-#'   \code{synop.YYYY}. Default to FALSE
+#' @param path Path to folder where to save the archive. Default to \code{tempdir()}.
 #'
 #' @return A data.frame containing the downloaded data.
 #'
@@ -38,7 +36,7 @@
 #' mfclim_synop(2020, TRUE)
 #' mydata <- mfclim_synop(2020, FALSE)
 #' }
-mfclim_synop <- function(year,envload=FALSE){
+mfclim_synop <- function(year, path=tempdir()){
 
   if (as.numeric(year) < 1996 | as.numeric(year) > format(Sys.Date(),"%Y")){
     stop(paste0("Year ",year," is not in the interval 1996-",format(Sys.Date(),"%Y")))
@@ -48,18 +46,20 @@ mfclim_synop <- function(year,envload=FALSE){
   # Specify the file name and location where you want to save the file on your computer
   url <- paste0("https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/OBS/SYNOP/synop_",year,".csv.gz")
   object_name <- paste0("synop.",year)
-  archive_name <- paste0(object_name,".csv.gz")
+  archive_name <- paste0(path,"/",object_name,".csv.gz")
 
   # Call the download.file() function, passing in the URL and file name/location as arguments
   download.file(url, archive_name, mode = "wb")
 
+  #
+  if (file.exists(archive_name)){
+    message(paste0("The archive has been saved to ",archive_name))
+  } else {
+    stop("Download failed")
+  }
+
   # uncompresses downloaded file and create a data.frame
   table <- read.csv(gzfile(archive_name),sep = ";", na.strings = c("", "NA", "mq"))
-
-  # load in the global environment with name "datYYYY"
-  if(envload == TRUE ){
-    assign(object_name, table, envir = .GlobalEnv)
-  }
 
   return(table)
 }
@@ -199,6 +199,7 @@ mfclim_order <- function(token, station, step = c("1mo", "10d","1d","1h","6m"), 
 #' @param id_cmde Numeric or character. Order ID returned by
 #'   \code{mfclim_order()}.
 #' @param filename Character string. Name of the output CSV file.
+#' @param folder Character string. Where to save the downloaded CSV file. Default to \code{tempdir()}
 #'
 #' @return Character string. Path to the downloaded file.
 #'
@@ -214,9 +215,10 @@ mfclim_order <- function(token, station, step = c("1mo", "10d","1d","1h","6m"), 
 #' \dontrun{
 #' file <- mfclim_download(token, id_cmde = 123456, filename = "meteo.csv")
 #' }
-mfclim_download <- function(token, id_cmde, filename = "data.csv") {
+mfclim_download <- function(token, id_cmde, filename = "data.csv", folder = tempdir()) {
 
   url <- "https://public-api.meteofrance.fr/public/DPClim/v1/commande/fichier"
+  filepath <- paste0(folder,"/",filename)
 
   repeat {
 
@@ -226,11 +228,12 @@ mfclim_download <- function(token, id_cmde, filename = "data.csv") {
         Authorization = paste("Bearer", token)
       ),
       query = list(`id-cmde` = id_cmde),
-      write_disk(filename, overwrite = TRUE)
+      write_disk(filepath, overwrite = TRUE)
     )
 
     if (status_code(res) == 201) {
       message("File downloaded successfully.")
+      message(paste0("The file has been saved to ",filepath))
       break
     }
 
@@ -244,7 +247,7 @@ mfclim_download <- function(token, id_cmde, filename = "data.csv") {
     }
   }
 
-  return(filename)
+  return(filepath)
 }
 
 #' Download archived meteorological data from the Meteo-France "Donnees Climatologiques" API in one step
@@ -271,7 +274,8 @@ mfclim_download <- function(token, id_cmde, filename = "data.csv") {
 #' @param step Character string. Time step of the requested data.
 #' @param date_deb Character string. Start date in ISO 8601 *UTC* format (see example). If \code{step = "6m"}, minutes values must be multiples of 6 (00, 06, 12, 18, 24, 30, 36, 42, 48, 54).
 #' @param date_fin Character string. End date in ISO 8601 *UTC* format. If \code{step = "6m"}, minutes values must be multiples of 6 (00, 06, 12, 18, 24, 30, 36, 42, 48, 54).
-#' @param filename Character string. Name of the downloaded CSV file.
+#' @param filename Character string. Name of the downloaded CSV file. Default to
+#' @param folder Character string. Where to save the downloaded CSV file. Default to \code{tempdir()}.
 #'
 #' @return A data.frame containing the climate data.
 #'
@@ -299,7 +303,8 @@ mfclim_get_data <- function(
     step,
     date_deb,
     date_fin,
-    filename = "data.csv"
+    filename = "data.csv",
+    folder = tempdir()
 ) {
 
   if (missing(token) & !missing(client_auth)){
@@ -308,6 +313,8 @@ mfclim_get_data <- function(
   } else if (missing(token) & missing(client_auth)){
     stop("Either 'client_auth' or 'token' must be provided.")
   }
+
+
 
 
   id_cmde <- mfclim_order(
@@ -320,7 +327,7 @@ mfclim_get_data <- function(
 
   Sys.sleep(2)
 
-  file <- mfclim_download(token, id_cmde, filename = filename)
+  file <- mfclim_download(token, id_cmde, filename = filename, folder = folder)
 
   data <- read.csv(file, sep = ";")
 
