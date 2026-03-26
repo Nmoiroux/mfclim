@@ -4,14 +4,14 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-mfclim is an R package to download archived meteorological data from Météo-France using the 'Données Climatologiques' [API](https://portail-api.meteofrance.fr/web/en/api/DonneesPubliquesClimatologie). It provides functions to authenticate, list stations, retrieve station metadata, request climate data, download files, and import data directly into R. 
-mfclim has also a function to download SYNOP WMO open data archives from [meteo.data.gouv.fr](https://meteo.data.gouv.fr/datasets/686f8595b351c06a3a790867).  
+`mfclim` is an R package to download archived meteorological data from Météo-France using the 'Données Climatologiques' [API](https://portail-api.meteofrance.fr/web/en/api/DonneesPubliquesClimatologie). It provides functions to authenticate, list stations, retrieve station metadata, request climate data, download files, and import data directly into R. 
+`mfclim` has also a function to download SYNOP WMO open data archives from [meteo.data.gouv.fr](https://meteo.data.gouv.fr/datasets/686f8595b351c06a3a790867).  
 
-The package is primarimy designed as a lightweight wrapper around the Météo-France API.
+The package is primarily designed as a lightweight wrapper around the Météo-France API.
 
 ## Installation
 
-You can install the development version of mfclim from [GitHub](https://github.com/) with:
+You can install the development version of `mfclim` from [GitHub](https://github.com/) with:
 
 ```R 
 # install.packages("devtools")
@@ -38,7 +38,7 @@ Copy the string that appears after "Authorization: Basic" and paste it in R as f
 
 `client_auth <- "1nSHsOA5tKHea6IFAKE1ga8pOMcpLSTAooJfnOpgtErsJxwftUmlLFAKE6cM86efz5pAf00Pj1pv"`
 
-`client_auth` is your unique identifier to the API portal.
+`client_auth` is your unique identifier to the API portal, it is used to request an access token required to query the API.
 
 
 ### Main functions
@@ -71,6 +71,8 @@ stations_34_daily <- mfclim_list_stations(
                   departement = "34",
                   step = "1h",
                   parametre = "precipitation")
+                  
+head(stations_34_daily)
 ```
 
 ### Example – Get station information
@@ -80,6 +82,10 @@ stations_34_daily <- mfclim_list_stations(
 
 info_mpl_airport <- mfclim_info_station(token = token,
                                            station = 34154001)
+                                           
+info_mpl_airport$nom        # station name
+info_mpl_airport$positions  # coordinates
+info_mpl_airport$parametres # parameters recorded with corresponding dates
 ```
 
 ### Example – Download daily data
@@ -94,10 +100,13 @@ data <- mfclim_get_data(
   date_fin = "2018-12-30T01:00:00Z",
   file = "meteo_data.csv"
 )
+
+head(data)
 ```
 ### Notes 
 The Météo-France API uses asynchronous requests: data must first be ordered, then downloaded. Large requests may take several minutes before the file is available.
-Dates must be provided in ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ
+Dates must be provided in ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ.
+Documentation (metadata) for the downloaded data are available on the Météo-France [Wiki](https://confluence-meteofrance.atlassian.net/wiki/x/AYALJQ).
 
 
 
@@ -106,6 +115,8 @@ Dates must be provided in ISO 8601 UTC format: YYYY-MM-DDTHH:MM:SSZ
 The package also allows downloading SYNOP surface observation data from the Météo-France open data portal.
 
 SYNOP data include surface meteorological observations transmitted through the World Meteorological Organization (WMO) Global Telecommunication System. Observations typically include temperature, humidity, wind speed and direction, atmospheric pressure, precipitation, cloud cover, visibility, and present weather. Data are available every 3 hours for mainland France and overseas territories.
+
+Please take a look to the [list of stations](https://www.data.gouv.fr/api/1/datasets/r/d82625f7-091c-40c5-a4e7-313a2ba5d3ef) and [metadata](https://www.data.gouv.fr/api/1/datasets/r/d129bc15-f72f-4825-a124-9c4b3747c156).
 
 ### Example
 ```r
