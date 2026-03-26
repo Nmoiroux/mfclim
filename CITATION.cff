@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: >-
+  mfclim, an R package to download archived meteorological data of Météo-France
+message: 'If you use this software, please cite it as below.'
+type: software
+authors:
+  - given-names: Nicolas
+    family-names: Moiroux
+    email: nicolas.moiroux@ird.fr
+    orcid: 'https://orcid.org/0000-0001-6755-6167'
+identifiers:
+  - type: doi
+    value:
+repository-code: 'https://github.com/Nmoiroux/mfclim'
+version: 0.1.0
+date-released: '2026-XX-XX'

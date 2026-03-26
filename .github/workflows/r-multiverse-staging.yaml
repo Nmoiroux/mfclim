@@ -1,0 +1,17 @@
+name: r-multiverse-staging
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch: # Lets you run the workflow manually in the GitHub web interface.
+  # push: # Runs on every push to GitHub.
+  # pull_request: # Runs on every GitHub pull request.
+  # schedule: # Run on a schedule, e.g. 2:15 AM UTC every Monday:
+  #   - cron: '15 2 * * 1'
+
+jobs:
+  r-multiverse-staging:
+    uses: r-universe-org/workflows/.github/workflows/build.yml@v3
+    with:
+      universe: r-multiverse-staging

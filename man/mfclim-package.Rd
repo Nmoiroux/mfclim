@@ -4,9 +4,9 @@
 \name{mfclim-package}
 \alias{mfclim}
 \alias{mfclim-package}
-\title{mfclim: Download Météo-France data using API and SYNOP open data.}
+\title{mfclim: Download archived meteorological data from Meteo-France}
 \description{
-Download climatological data from the Météo-France public API 'Données climatologiques' and SYNOP open data archives. It provides functions to authenticate, list stations, retrieve station metadata, request climate data, download files, and import data directly into R.
+Download meteorological data from the Météo-France public API 'Données climatologiques' and SYNOP open data archives. It provides functions to authenticate, list stations, retrieve station metadata, request data, download files, and import data directly into R.
 }
 \seealso{
 Useful links:

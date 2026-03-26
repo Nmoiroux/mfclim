@@ -285,6 +285,7 @@ mfclim_download <- function(token, id_cmde, filename = "data.csv", folder = temp
 #' \code{mfclim_order()},
 #' \code{mfclim_download()}
 #'
+#'
 #' @export
 #'
 #' @examples
@@ -314,9 +315,6 @@ mfclim_get_data <- function(
   } else if (missing(token) & missing(client_auth)){
     stop("Either 'client_auth' or 'token' must be provided.")
   }
-
-
-
 
   id_cmde <- mfclim_order(
     token,
@@ -361,7 +359,6 @@ mfclim_get_data <- function(
 #' @details If \code{token} is not provided, the function will automatically
 #'   request a new token using \code{client_auth}.
 #'
-#' @importFrom httr GET add_headers
 #'
 #' @export
 #'

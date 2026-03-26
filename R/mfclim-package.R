@@ -10,5 +10,6 @@
 #' @importFrom httr write_disk
 #' @importFrom utils download.file
 #' @importFrom utils read.csv
+#' @importFrom utils read.csv2
 ## usethis namespace: end
 NULL
