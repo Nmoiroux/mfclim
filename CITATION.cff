@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: >-
-  mfclim, an R package to download archived meteorological data of Météo-France
+  mfclim, an R package to download archived meteorological data from Meteo-France
 message: 'If you use this software, please cite it as below.'
 type: software
 authors:
@@ -13,4 +13,4 @@ identifiers:
     value:
 repository-code: 'https://github.com/Nmoiroux/mfclim'
 version: 0.1.0
-date-released: '2026-XX-XX'
+date-released: '2026-03-26'

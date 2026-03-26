@@ -1,6 +1,6 @@
 bibentry(
   bibtype = "Manual",
-  title = "mfclim, an R package to download archived meteorological data of Météo-France",
+  title = "mfclim, an R package to download archived meteorological data from Meteo-France",
   author = "Nicolas Moiroux",
   year = 2026,
   note = "R package version 0.1.0",
