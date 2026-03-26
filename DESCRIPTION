@@ -1,6 +1,6 @@
 Package: mfclim
 Title: Download archived meteorological data from Meteo-France
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Nicolas", "Moiroux", , "nicolas.moiroux@ird.fr", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-6755-6167"))
