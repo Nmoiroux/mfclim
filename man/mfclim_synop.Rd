@@ -40,7 +40,6 @@ Missing values coded as "", "NA", or "mq" are converted to NA in the returned da
 }
 \examples{
 \dontrun{
-mfclim_synop(2020, TRUE)
-mydata <- mfclim_synop(2020, FALSE)
+mydata <- mfclim_synop(2020)
 }
 }
