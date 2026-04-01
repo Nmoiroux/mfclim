@@ -2,6 +2,7 @@
 # mfclim
 
 <!-- badges: start -->
+[![R-multiverse status](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcommunity.r-multiverse.org%2Fapi%2Fpackages%2Fmfclim&query=%24.Version&label=r-multiverse)](https://community.r-multiverse.org/mfclim)
 <!-- badges: end -->
 
 `mfclim` is an R package to download archived meteorological data from Météo-France using the 'Données Climatologiques' [API](https://portail-api.meteofrance.fr/web/en/api/DonneesPubliquesClimatologie). It provides functions to authenticate, list stations, retrieve station metadata, request climate data, download files, and import data directly into R. 
@@ -23,22 +24,23 @@ devtools::install_github("Nmoiroux/mfclim")
 To use the API, you need credentials from the Météo-France API portal:
 
 1. Register to the portal and subscribe to the API
-- Create an account on the [Météo-France API portal](https://portail-api.meteofrance.fr/web/fr/) and log in.
+- Create an account on the [Météo-France API portal](https://portail-api.meteofrance.fr/web/fr/), wait for the confirmation then activation emails.
 - Navigate to the '[Climatological data API page](https://portail-api.meteofrance.fr/web/en/api/DonneesPubliquesClimatologie)' and click 'Subscribe to the API for free'.
+- **Log in** if not done (may require to remove cookies to work properly). 
 
 2. Get your personal identifier
-- Click account button ("Hello first-name family-name", top right) 
-- Go to: My API → Climatological data → Generate Token
+- Navigate to [Dashboard](https://portail-api.meteofrance.fr/web/en/dashboard) (or click the user button icon on top-right then → 'My API')
+- Click 'Generate Token' in the "Climatological Data" panel.
 
 At the bottom, there is a code block as below:
 
 `curl -k -X POST https://portail-api.meteofrance.fr/token -d "grant_type=client_credentials" -H "Authorization: Basic 1nSHsOA5tKHea6IFAKE1ga8pOMcpLSTAooJfnOpgtErsJxwftUmlLFAKE6cM86efz5pAf00Pj1pv"`
 
-Copy the string that appears after "Authorization: Basic" and paste it in R as follow:
+Copy the string that appears after "Authorization: Basic" and paste it to R as follow:
 
 `client_auth <- "1nSHsOA5tKHea6IFAKE1ga8pOMcpLSTAooJfnOpgtErsJxwftUmlLFAKE6cM86efz5pAf00Pj1pv"`
 
-`client_auth` is your unique identifier to the API portal, it is used to request an access token required to query the API.
+`client_auth` is your unique identifier to the API portal, it is used to request access token needed to query the API.
 
 
 ### Main functions

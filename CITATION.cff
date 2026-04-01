@@ -10,7 +10,7 @@ authors:
     orcid: 'https://orcid.org/0000-0001-6755-6167'
 identifiers:
   - type: doi
-    value:
+    value: '10.32614/CRAN.package.mfclim'
 repository-code: 'https://github.com/Nmoiroux/mfclim'
 version: 0.1.0
 date-released: '2026-03-26'

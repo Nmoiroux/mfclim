@@ -4,5 +4,5 @@ bibentry(
   author = "Nicolas Moiroux",
   year = 2026,
   note = "R package version 0.1.0",
-  doi = ""
+  doi = "10.32614/CRAN.package.mfclim"
 )
