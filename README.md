@@ -6,9 +6,14 @@
 <!-- badges: end -->
 
 `mfclim` is an R package to download archived meteorological data from Météo-France using the 'Données Climatologiques' [API](https://portail-api.meteofrance.fr/web/en/api/DonneesPubliquesClimatologie). It provides functions to authenticate, list stations, retrieve station metadata, request climate data, download files, and import data directly into R. 
-`mfclim` has also a function to download SYNOP WMO open data archives from [meteo.data.gouv.fr](https://meteo.data.gouv.fr/datasets/686f8595b351c06a3a790867).  
+`mfclim` also allows direct downloads of yearly [SYNOP WMO open data](https://meteo.data.gouv.fr/datasets/686f8595b351c06a3a790867) archives from [meteo.data.gouv.fr](https://meteo.data.gouv.fr).  
 
 The package is primarily designed as a lightweight wrapper around the Météo-France API.
+
+1. [Installation instruction](#installation)
+2. [Main functions](#main-functions)
+3. [Download data using the Météo-France API](#météo-france-api-access)
+4. [Download SYNOP WMO data](#synop-data-open-data)
 
 ## Installation
 
@@ -18,6 +23,16 @@ You can install the development version of `mfclim` from [GitHub](https://github
 # install.packages("devtools")
 devtools::install_github("Nmoiroux/mfclim")
 ``` 
+
+## Main functions
+| Function                 | Description                                   |
+| ------------------------ | --------------------------------------------- |
+| `mfclim_get_token()`     | Get API access token                          |
+| `mfclim_list_stations()` | List stations by department                   |
+| `mfclim_info_station()`  | Get metadata for a station                    |
+| `mfclim_get_data()`      | Download data using the API                   |
+| `mfclim_synop()`         | Download SYNOP open data archive              |
+
 
 ## Météo-France API access
 
@@ -36,21 +51,14 @@ At the bottom, there is a code block as below:
 
 `curl -k -X POST https://portail-api.meteofrance.fr/token -d "grant_type=client_credentials" -H "Authorization: Basic 1nSHsOA5tKHea6IFAKE1ga8pOMcpLSTAooJfnOpgtErsJxwftUmlLFAKE6cM86efz5pAf00Pj1pv"`
 
-Copy the string that appears after "Authorization: Basic" and paste it to R as follow:
+Copy the string that appears after "Authorization: Basic" and paste it to R as follows:
 
-`client_auth <- "1nSHsOA5tKHea6IFAKE1ga8pOMcpLSTAooJfnOpgtErsJxwftUmlLFAKE6cM86efz5pAf00Pj1pv"`
+```r 
+client_auth <- "1nSHsOA5tKHea6IFAKE1ga8pOMcpLSTAooJfnOpgtErsJxwftUmlLFAKE6cM86efz5pAf00Pj1pv"
+```
 
 `client_auth` is your unique identifier to the API portal, it is used to request access token needed to query the API.
 
-
-### Main functions
-| Function                 | Description                                   |
-| ------------------------ | --------------------------------------------- |
-| `mfclim_get_token()`     | Get API access token                          |
-| `mfclim_list_stations()` | List stations by department                   |
-| `mfclim_info_station()`  | Get metadata for a station                    |
-| `mfclim_get_data()`      | Download data using the API                   |
-| `mfclim_synop()`         | Download SYNOP open data archive              |
 
 ### Example – List stations in a department
 ```r
@@ -116,9 +124,9 @@ Documentation (metadata) for the downloaded data are available on the Météo-Fr
 
 ## SYNOP data (open data)
 
-The package also allows downloading SYNOP surface observation data from the Météo-France open data portal.
+The package also allows downloading yearly SYNOP surface observation data from the Météo-France open data portal.
 
-SYNOP data include surface meteorological observations transmitted through the World Meteorological Organization (WMO) Global Telecommunication System. Observations typically include temperature, humidity, wind speed and direction, atmospheric pressure, precipitation, cloud cover, visibility, and present weather. Data are available every 3 hours for mainland France and overseas territories.
+SYNOP data include surface meteorological observations transmitted through the World Meteorological Organization (WMO) Global Telecommunication System. Observations typically include temperature, humidity, wind speed and direction, atmospheric pressure, precipitation, cloud cover, visibility, and present weather. Data are recorded every 3 hours and available for mainland France and overseas territories.
 
 Please take a look to the [list of stations](https://www.data.gouv.fr/api/1/datasets/r/d82625f7-091c-40c5-a4e7-313a2ba5d3ef) and [metadata](https://www.data.gouv.fr/api/1/datasets/r/d129bc15-f72f-4825-a124-9c4b3747c156).
 
