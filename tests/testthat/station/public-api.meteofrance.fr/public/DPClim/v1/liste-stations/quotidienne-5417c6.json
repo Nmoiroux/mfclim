@@ -1,0 +1,492 @@
+[
+    {
+        "id": "75044001",
+        "nom": "JOINVILLE-LE-PONT",
+        "posteOuvert": false,
+        "typePoste": 3,
+        "lon": 2.4575,
+        "lat": 48.808167,
+        "alt": 40,
+        "postePublic": true
+    },
+    {
+        "id": "75101001",
+        "nom": "INNOCENTS",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.348333,
+        "lat": 48.860667,
+        "alt": 37,
+        "postePublic": true
+    },
+    {
+        "id": "75101002",
+        "nom": "MONNAIE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.336667,
+        "lat": 48.868333,
+        "alt": 33,
+        "postePublic": true
+    },
+    {
+        "id": "75104001",
+        "nom": "TOUR ST-JACQUES",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.348333,
+        "lat": 48.858333,
+        "alt": 38,
+        "postePublic": true
+    },
+    {
+        "id": "75105001",
+        "nom": "PLANTES",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.363333,
+        "lat": 48.843333,
+        "alt": 35,
+        "postePublic": true
+    },
+    {
+        "id": "75105004",
+        "nom": "PARIS-5E BASSIN DU PANTHEON",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.348333,
+        "lat": 48.845,
+        "alt": 68,
+        "postePublic": true
+    },
+    {
+        "id": "75105005",
+        "nom": "PARIS-5E VIEILLE ESTRAP",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.348333,
+        "lat": 48.845,
+        "alt": 59,
+        "postePublic": true
+    },
+    {
+        "id": "75106001",
+        "nom": "LUXEMBOURG",
+        "posteOuvert": true,
+        "typePoste": 2,
+        "lon": 2.3385,
+        "lat": 48.844833,
+        "alt": 50,
+        "postePublic": true
+    },
+    {
+        "id": "75106002",
+        "nom": "VAUGIRARD",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.336667,
+        "lat": 48.868333,
+        "alt": 50,
+        "postePublic": true
+    },
+    {
+        "id": "75107001",
+        "nom": "LAENNEC",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.323333,
+        "lat": 48.85,
+        "alt": 36,
+        "postePublic": true
+    },
+    {
+        "id": "75107002",
+        "nom": "METEO COUR",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.336667,
+        "lat": 48.868333,
+        "alt": 34,
+        "postePublic": true
+    },
+    {
+        "id": "75107003",
+        "nom": "METEO TERRASSE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.336667,
+        "lat": 48.868333,
+        "alt": 52,
+        "postePublic": true
+    },
+    {
+        "id": "75107004",
+        "nom": "CHAMP DE MARS",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.296667,
+        "lat": 48.858333,
+        "alt": 34,
+        "postePublic": true
+    },
+    {
+        "id": "75107005",
+        "nom": "TOUR EIFFEL",
+        "posteOuvert": true,
+        "typePoste": 2,
+        "lon": 2.2945,
+        "lat": 48.858333,
+        "alt": 330,
+        "postePublic": true
+    },
+    {
+        "id": "75107007",
+        "nom": "PARIS-7E HOPITAL MILITAIRE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.321667,
+        "lat": 48.858333,
+        "alt": 32,
+        "postePublic": true
+    },
+    {
+        "id": "75108001",
+        "nom": "LOUIS XVI",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.328333,
+        "lat": 48.876667,
+        "alt": 35,
+        "postePublic": true
+    },
+    {
+        "id": "75110001",
+        "nom": "LARIBOISIERE",
+        "posteOuvert": true,
+        "typePoste": 2,
+        "lon": 2.352,
+        "lat": 48.882833,
+        "alt": 55,
+        "postePublic": true
+    },
+    {
+        "id": "75110002",
+        "nom": "ST-LOUIS",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.368333,
+        "lat": 48.873333,
+        "alt": 48,
+        "postePublic": true
+    },
+    {
+        "id": "75112001",
+        "nom": "ILE DE BERCY",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.411667,
+        "lat": 48.831667,
+        "alt": 50,
+        "postePublic": true
+    },
+    {
+        "id": "75112002",
+        "nom": "LA FAISANDERIE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.456833,
+        "lat": 48.819833,
+        "alt": 54,
+        "postePublic": true
+    },
+    {
+        "id": "75112003",
+        "nom": "LEO LAGRANGE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.4375,
+        "lat": 48.835,
+        "alt": 49,
+        "postePublic": true
+    },
+    {
+        "id": "75112004",
+        "nom": "ST-ANTOINE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.380833,
+        "lat": 48.848167,
+        "alt": 36,
+        "postePublic": true
+    },
+    {
+        "id": "75113001",
+        "nom": "PORTE D'IVRY",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.373333,
+        "lat": 48.82,
+        "alt": 58,
+        "postePublic": true
+    },
+    {
+        "id": "75113002",
+        "nom": "SALPETRIERE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.367333,
+        "lat": 48.839167,
+        "alt": 34,
+        "postePublic": true
+    },
+    {
+        "id": "75114001",
+        "nom": "PARIS-MONTSOURIS",
+        "posteOuvert": true,
+        "typePoste": 0,
+        "lon": 2.337833,
+        "lat": 48.821667,
+        "alt": 75,
+        "postePublic": true
+    },
+    {
+        "id": "75114002",
+        "nom": "OBSERVATOIRE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.336667,
+        "lat": 48.836667,
+        "alt": 62,
+        "postePublic": true
+    },
+    {
+        "id": "75114003",
+        "nom": "OBS. TERRASSE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.336667,
+        "lat": 48.838333,
+        "alt": 91,
+        "postePublic": true
+    },
+    {
+        "id": "75114004",
+        "nom": "PARIS-14E",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.328333,
+        "lat": 48.831667,
+        "alt": 69,
+        "postePublic": true
+    },
+    {
+        "id": "75114007",
+        "nom": "PARIS-MONTSOURIS-DOUBLE",
+        "posteOuvert": true,
+        "typePoste": 2,
+        "lon": 2.337833,
+        "lat": 48.821667,
+        "alt": 75,
+        "postePublic": true
+    },
+    {
+        "id": "75115001",
+        "nom": "VAUGIRARD",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.299333,
+        "lat": 48.831,
+        "alt": 57,
+        "postePublic": true
+    },
+    {
+        "id": "75115002",
+        "nom": "NECKER",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.336667,
+        "lat": 48.868333,
+        "alt": 36,
+        "postePublic": true
+    },
+    {
+        "id": "75115003",
+        "nom": "G. POMPIDOU",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.2745,
+        "lat": 48.838667,
+        "alt": 32,
+        "postePublic": true
+    },
+    {
+        "id": "75116001",
+        "nom": "AUTEUIL",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.268333,
+        "lat": 48.841667,
+        "alt": 39,
+        "postePublic": true
+    },
+    {
+        "id": "75116002",
+        "nom": "BAGATELLE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.245333,
+        "lat": 48.868667,
+        "alt": 36,
+        "postePublic": true
+    },
+    {
+        "id": "75116003",
+        "nom": "PASSY",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.291667,
+        "lat": 48.87,
+        "alt": 78,
+        "postePublic": true
+    },
+    {
+        "id": "75116004",
+        "nom": "ACCLIMATATION",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.336667,
+        "lat": 48.868333,
+        "alt": 39,
+        "postePublic": true
+    },
+    {
+        "id": "75116005",
+        "nom": "AUTEUIL",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.253333,
+        "lat": 48.846667,
+        "alt": 37,
+        "postePublic": true
+    },
+    {
+        "id": "75116008",
+        "nom": "LONGCHAMP",
+        "posteOuvert": true,
+        "typePoste": 1,
+        "lon": 2.233667,
+        "lat": 48.854833,
+        "alt": 27,
+        "postePublic": true
+    },
+    {
+        "id": "75117001",
+        "nom": "BATIGNOLLES",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.315333,
+        "lat": 48.887667,
+        "alt": 45,
+        "postePublic": true
+    },
+    {
+        "id": "75118001",
+        "nom": "MONTMARTRE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.343333,
+        "lat": 48.886667,
+        "alt": 138,
+        "postePublic": true
+    },
+    {
+        "id": "75119001",
+        "nom": "BUTTES CHAUMONT",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.380833,
+        "lat": 48.876833,
+        "alt": 97,
+        "postePublic": true
+    },
+    {
+        "id": "75119002",
+        "nom": "VILLETTE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.336667,
+        "lat": 48.868333,
+        "alt": 57,
+        "postePublic": true
+    },
+    {
+        "id": "75119003",
+        "nom": "HEROLD",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.336667,
+        "lat": 48.868333,
+        "alt": 72,
+        "postePublic": true
+    },
+    {
+        "id": "75119004",
+        "nom": "BUTTES RESERV.",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.381667,
+        "lat": 48.878333,
+        "alt": 97,
+        "postePublic": true
+    },
+    {
+        "id": "75120001",
+        "nom": "CHARONNE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.415,
+        "lat": 48.855,
+        "alt": 83,
+        "postePublic": true
+    },
+    {
+        "id": "75120002",
+        "nom": "MENIL.RESERVOIR",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.411667,
+        "lat": 48.876667,
+        "alt": 108,
+        "postePublic": true
+    },
+    {
+        "id": "75120004",
+        "nom": "BELLEVILLE",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.336667,
+        "lat": 48.868333,
+        "alt": 130,
+        "postePublic": true
+    },
+    {
+        "id": "75120005",
+        "nom": "TENON",
+        "posteOuvert": false,
+        "typePoste": 4,
+        "lon": 2.402167,
+        "lat": 48.865333,
+        "alt": 94,
+        "postePublic": true
+    },
+    {
+        "id": "75120006",
+        "nom": "BELLEVILLE PARC",
+        "posteOuvert": false,
+        "typePoste": 2,
+        "lon": 2.384667,
+        "lat": 48.871333,
+        "alt": 80,
+        "postePublic": true
+    }
+]
