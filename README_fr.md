@@ -122,9 +122,9 @@ La documentation (métadonnées) des données téléchargées est disponible sur
 
 ## Données SYNOP
 
-Le package permet également de télécharger les données annuelles d’observations SYNOP de surface depuis le portail open data de Météo-France.
+Le package permet également de télécharger les données  d’observations SYNOP annuelles depuis le portail des données publiques de Météo-France.
 
-Les données SYNOP comprennent des observations météorologiques de surface transmises via le Système mondial de télécommunication de l’Organisation Météorologique Mondiale (OMM). Les observations incluent généralement la température, l’humidité, la vitesse et la direction du vent, la pression atmosphérique, les précipitations, la nébulosité, la visibilité et le temps présent. Les données sont enregistrées toutes les 3 heures et sont disponibles pour la France métropolitaine et les territoires d’outre-mer.
+Les données SYNOP sont des observations météorologiques de surface transmises via le Système mondial de télécommunication (SMT) de l’Organisation Météorologique Mondiale (OMM). Les observations incluent généralement la température, l’humidité, la vitesse et la direction du vent, la pression atmosphérique, les précipitations, la nébulosité, la visibilité et le temps présent. Les données sont enregistrées toutes les 3 heures et sont disponibles pour la France métropolitaine et les territoires d’outre-mer depuis 1996.
 
 Veuillez consulter la [liste des stations](https://www.data.gouv.fr/api/1/datasets/r/d82625f7-091c-40c5-a4e7-313a2ba5d3ef) et les [metadonnées](https://www.data.gouv.fr/api/1/datasets/r/d129bc15-f72f-4825-a124-9c4b3747c156).
 
