@@ -1,9 +1,12 @@
-
 # mfclim
 
 <!-- badges: start -->
 [![R-multiverse status](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcommunity.r-multiverse.org%2Fapi%2Fpackages%2Fmfclim&query=%24.Version&label=r-multiverse)](https://community.r-multiverse.org/mfclim)
 <!-- badges: end -->
+
+
+[Cliquez ici pour le Français](https://github.com/Nmoiroux/mfclim/blob/main/README_fr.md)
+
 
 `mfclim` is an R package to download archived meteorological data from Météo-France using the 'Données Climatologiques' [API](https://portail-api.meteofrance.fr/web/en/api/DonneesPubliquesClimatologie). It provides functions to authenticate, list stations, retrieve station metadata, request climate data, download files, and import data directly into R. 
 `mfclim` also allows direct downloads of yearly [SYNOP WMO open data](https://meteo.data.gouv.fr/datasets/686f8595b351c06a3a790867) archives from [meteo.data.gouv.fr](https://meteo.data.gouv.fr).  
@@ -105,7 +108,7 @@ info_mpl_airport$parametres # parameters recorded with corresponding dates
 data <- mfclim_get_data(
   token = token,
   station = "34154001",
-  step = "1h",
+  step = "1d",
   date_deb = "2018-11-29T01:00:00Z",
   date_fin = "2018-12-30T01:00:00Z",
   file = "meteo_data.csv"
