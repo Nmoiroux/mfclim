@@ -270,8 +270,10 @@ mfclim_download <- function(token, id_cmde, filename = "data.csv", folder = temp
 #'   Meteo-France API portal (optional if \code{token} is provided).
 #' @param token Character string. OAuth2 access token obtained with
 #'   \code{mfclim_get_token()} (optional if \code{client_auth} is provided).
-#' @param station Character string. Station identifier.
-#' @param step Character string. Time step of the requested data.
+#' @param station Character string. Station identifier (8-digit station code).
+#' @param step Character string. Time step of the ordered data. One of:
+#'   \code{"6m"} (6 minutes), \code{"1h"} (hourly), \code{"1d"} (daily),
+#'   \code{"10d"} (10-day), \code{"1mo"} (monthly).
 #' @param date_deb Character string. Start date in ISO 8601 *UTC* format (see example). If \code{step = "6m"}, minutes values must be multiples of 6 (00, 06, 12, 18, 24, 30, 36, 42, 48, 54).
 #' @param date_fin Character string. End date in ISO 8601 *UTC* format. If \code{step = "6m"}, minutes values must be multiples of 6 (00, 06, 12, 18, 24, 30, 36, 42, 48, 54).
 #' @param filename Character string. Name of the downloaded CSV file. Default to
