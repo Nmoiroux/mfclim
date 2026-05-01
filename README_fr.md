@@ -126,7 +126,7 @@ Le package permet également de télécharger les données  d’observations SYN
 
 Les données SYNOP sont des observations météorologiques de surface transmises via le Système mondial de télécommunication (SMT) de l’Organisation Météorologique Mondiale (OMM). Les observations incluent généralement la température, l’humidité, la vitesse et la direction du vent, la pression atmosphérique, les précipitations, la nébulosité, la visibilité et le temps présent. Les données sont enregistrées toutes les 3 heures et sont disponibles pour la France métropolitaine et les territoires d’outre-mer depuis 1996.
 
-Veuillez consulter la [liste des stations](https://www.data.gouv.fr/api/1/datasets/r/d82625f7-091c-40c5-a4e7-313a2ba5d3ef) et les [metadonnées](https://www.data.gouv.fr/api/1/datasets/r/d129bc15-f72f-4825-a124-9c4b3747c156).
+Veuillez consulter la [liste des stations](https://www.data.gouv.fr/api/1/datasets/r/8d205e4f-1dc2-42d4-868b-ab373e27bb27) et les [metadonnées](https://www.data.gouv.fr/api/1/datasets/r/c6c48fbb-8338-41b7-a63e-6bcfb23d0d92).
 
 ### Example
 ```r
