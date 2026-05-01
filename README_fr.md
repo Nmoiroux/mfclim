@@ -19,8 +19,8 @@ Le package est principalement conçu comme une interface légère autour de l’
 Vous pouvez installer la version de développement de `mfclim` depuis [GitHub](https://github.com/) with:
 
 ```R 
-# install.packages("devtools")
-devtools::install_github("Nmoiroux/mfclim")
+# install.packages("pak")
+pak::pak("Nmoiroux/mfclim")
 ``` 
 
 ## Fonctions principales

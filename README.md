@@ -23,8 +23,8 @@ The package is primarily designed as a lightweight wrapper around the Météo-Fr
 You can install the development version of `mfclim` from [GitHub](https://github.com/) with:
 
 ```R 
-# install.packages("devtools")
-devtools::install_github("Nmoiroux/mfclim")
+# install.packages("pak")
+pak::pak("Nmoiroux/mfclim")
 ``` 
 
 ## Main functions
