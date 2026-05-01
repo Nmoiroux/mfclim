@@ -2,7 +2,7 @@
 
 0 errors | 0 warnings | 2 notes
 
-* This is a new release.
+* This is a first release.
 
 One note is about the non (still) existing DOI in the CITATION file (I anticipated the DOI for the package).
 
