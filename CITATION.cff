@@ -12,5 +12,5 @@ identifiers:
   - type: doi
     value: '10.32614/CRAN.package.mfclim'
 repository-code: 'https://github.com/Nmoiroux/mfclim'
-version: 0.1.0
-date-released: '2026-03-26'
+version: 0.1.1
+date-released: '2026-05-01'
