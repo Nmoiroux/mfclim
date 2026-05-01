@@ -131,7 +131,7 @@ The package also allows downloading yearly SYNOP surface observation data from t
 
 SYNOP data include surface meteorological observations transmitted through the World Meteorological Organization (WMO) Global Telecommunication System. Observations typically include temperature, humidity, wind speed and direction, atmospheric pressure, precipitation, cloud cover, visibility, and present weather. Data are recorded every 3 hours and available for mainland France and overseas territories.
 
-Please take a look to the [list of stations](https://www.data.gouv.fr/api/1/datasets/r/d82625f7-091c-40c5-a4e7-313a2ba5d3ef) and [metadata](https://www.data.gouv.fr/api/1/datasets/r/d129bc15-f72f-4825-a124-9c4b3747c156).
+Please take a look to the [list of stations](https://www.data.gouv.fr/api/1/datasets/r/8d205e4f-1dc2-42d4-868b-ab373e27bb27) and [metadata](https://www.data.gouv.fr/api/1/datasets/r/c6c48fbb-8338-41b7-a63e-6bcfb23d0d92).
 
 ### Example
 ```r
