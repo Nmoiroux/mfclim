@@ -22,9 +22,11 @@ mfclim_get_data(
 \item{client_auth}{Character string. Authentication string provided by the
 Meteo-France API portal (optional if \code{token} is provided).}
 
-\item{station}{Character string. Station identifier.}
+\item{station}{Character string. Station identifier (8-digit station code).}
 
-\item{step}{Character string. Time step of the requested data.}
+\item{step}{Character string. Time step of the ordered data. One of:
+\code{"6m"} (6 minutes), \code{"1h"} (hourly), \code{"1d"} (daily),
+\code{"10d"} (10-day), \code{"1mo"} (monthly).}
 
 \item{date_deb}{Character string. Start date in ISO 8601 \emph{UTC} format (see example). If \code{step = "6m"}, minutes values must be multiples of 6 (00, 06, 12, 18, 24, 30, 36, 42, 48, 54).}
 
