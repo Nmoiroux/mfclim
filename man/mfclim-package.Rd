@@ -6,7 +6,7 @@
 \alias{mfclim-package}
 \title{mfclim: Download Archived Meteorological Data from 'Meteo-France'}
 \description{
-Download meteorological data from the 'Meteo-France' public API 'Données climatologiques' and 'SYNOP' open data archives. It provides functions to authenticate, list stations, retrieve station metadata, request data, download files, and import data directly into 'R'.
+Download meteorological data from the 'Meteo-France' public API 'Données climatologiques' \url{https://portail-api.meteofrance.fr} and 'SYNOP' open data archives \url{https://meteo.data.gouv.fr/datasets/686f8595b351c06a3a790867}. It provides functions to authenticate, list stations, retrieve station metadata, request data, download files, and import data directly into 'R'.
 }
 \seealso{
 Useful links:

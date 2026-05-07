@@ -5,7 +5,8 @@ Authors@R:
     person("Nicolas", "Moiroux", , "nicolas.moiroux@ird.fr", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-6755-6167"))
 Description: Download meteorological data from the 'Meteo-France' public
-    API 'Données climatologiques' and 'SYNOP' open data archives. It
+    API 'Données climatologiques' <https://portail-api.meteofrance.fr> and 'SYNOP' 
+    open data archives <https://meteo.data.gouv.fr/datasets/686f8595b351c06a3a790867>. It
     provides functions to authenticate, list stations, retrieve station
     metadata, request data, download files, and import data directly into
     'R'.
