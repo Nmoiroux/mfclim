@@ -2,6 +2,8 @@
 
 <!-- badges: start -->
 [![R-multiverse status](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcommunity.r-multiverse.org%2Fapi%2Fpackages%2Fmfclim&query=%24.Version&label=r-multiverse)](https://community.r-multiverse.org/mfclim)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/mfclim)](https://cran.r-project.org/package=mfclim)
+[![](https://cranlogs.r-pkg.org/badges/mfclim)](https://cran.r-project.org/package=mfclim)
 <!-- badges: end -->
 
 
