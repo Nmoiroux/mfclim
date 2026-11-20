@@ -1,4 +1,4 @@
-# mfclim
+# mfclim <a href="https://github.com/nmoiroux/mfclim"><img src="man/figures/mfclim Weather Grid Badge.png" align="right" height="138" /></a>
 
 <!-- badges: start -->
 [![R-multiverse status](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcommunity.r-multiverse.org%2Fapi%2Fpackages%2Fmfclim&query=%24.Version&label=r-multiverse)](https://community.r-multiverse.org/mfclim)
